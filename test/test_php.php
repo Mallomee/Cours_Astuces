@@ -51,4 +51,26 @@ else{
     echo ' O_O\' <br/>';
 }
 
-?>
+
+/****** Tableau mon ami (ou pas) ! ******/
+
+$bestOfTeam = [
+    'sheherazadesTeam' => [
+        "Atouss", // son index sera 0
+        "Hugo-Jacques", // son index sera 1
+        "Clelia", // 2
+        "Céline", // 3
+    ],
+    'profTeam' => [
+        'Prue' => 'CharlesOclock',
+        'Piper' => 'GregOclock',
+        'Phoebe' => 'AlexisOclock'
+    ]
+];
+
+foreach($bestOfTeam as $nameTeam => $tableau ){
+    echo $nameTeam;
+    foreach ($tableau as $value){
+        echo $value;
+    }
+}
