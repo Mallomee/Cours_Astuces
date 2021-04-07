@@ -30,7 +30,11 @@ $a = 3;
 $b = 3.5;
 $calcul = $a + $b;
 
+echo $calcul;
+
 ```
+
+Ici nous avons défini dans `$a` un **int** de *3* et dans `$b` un **float** de 3.5 ( /!\ attention à bien mettre un `.` et non une `,` à vos nombres). Enfin dans `$calcul` nous effectuons l'addition des deux et le stockons dans la variable que l'on appelle avec un écho (dans le dossier test et dans test_php.php, vous aurez le résultat de cette dernière)
 
 
 ## Les tableaux
