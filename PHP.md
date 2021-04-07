@@ -6,6 +6,12 @@ Php est un langage qui peut permettre l'emploi de données pour la création de 
 
 ## Les Bases
 
+### Avant toute chose
+
+PHP est un langage donc comme tout langage, avant de s'y mettre c'est toujours sympa de dire comment on parle. En effet dans des feuilles PHP on pourra inclure du HTML et y ajouter des éléments de PHP aussi il faut savoir que pour commencer à coder en PHP, il faut ouvrir une balise comme suit : `<?php` et la fermer ainsi : `?>`.
+
+Il existe aussi un raccourci si l'on ne souhaite que faire un echo. Il s'agit de : `<?=` qui se fermera comme une balise PHP standard.
+
 ### Variable
 
 Pour PHP, on peut créer une variable qu'on rappelera à chaque fois avec l'écriture avec laquelle on l'a créé. Cette variable restera stockée dans la page où elle aura été chargée.
