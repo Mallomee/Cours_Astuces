@@ -23,7 +23,15 @@ Il existe plusieurs types de variables :
 - des nombres entiers (`int`)
 - des nombres décimaux (`float`)
 
-On peut aussi y inclure des calculs ou des tableaux ou même encore d'autres variables
+On peut aussi y inclure des calculs ou des tableaux ou même encore d'autres variables ! Bref c'est un couteau suisse ! Voyons quelques petites choses de sa part.
+
+```php
+$a = 3;
+$b = 3.5;
+$calcul = $a + $b;
+
+```
+
 
 ## Les tableaux
 
