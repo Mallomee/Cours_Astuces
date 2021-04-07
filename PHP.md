@@ -38,7 +38,11 @@ Ici nous avons défini dans `$a` un **int** de *3* et dans `$b` un **float** de 
 
 #### String
 
-Le texte s'écrit soit entre `"ton texte"` ou entre `'ton texte'`. La première version demandera à PHP de vérifier son contenu et ainsi d'y voir s'il y a des variables ou autre alors que pour le second cas, il retranscrira tel quel le contenu.
+Le texte s'écrit soit entre `"ton texte"` ou entre `'ton texte'`. La première version demandera à PHP de vérifier son contenu et ainsi d'y voir s'il y a des variables ou autre alors que pour le second cas, il retranscrira tel quel le contenu. (voir /test/test_php.php pour un exemple concret).
+
+#### booléen
+
+Un booléen sert souvent dans des conditions car il retourne une valeur vrai (`true`) ou fausse (`false`). On peut l'appliquer ainsi à une variable et le changer en fonction de si les conditions sont remplis ou non. (voir /test/test_php.php pour un exemple concret)
 
 
 
