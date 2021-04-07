@@ -68,9 +68,13 @@ $bestOfTeam = [
     ]
 ];
 
+// On fait un premier foreach qui prend notre tableau $bestOfTeam où on va chercher la clé avec $nameTeam (donc sheherazadesTeam et profTeam ) et leurs tableaux respectifs
 foreach($bestOfTeam as $nameTeam => $tableau ){
+    // On affiche les clés dans $nameTeam
     echo '<ul>' . $nameTeam;
+    //On refait un autre foreach pour récupérer les valeurs dans les tableaux de sheherazadesTeam et profTeam
     foreach ($tableau as $value){
+        // et on affiche toutes leurs valeurs
         echo '<li>' . $value . '</li>';
     }
     echo '</ul>';
