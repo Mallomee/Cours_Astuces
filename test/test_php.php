@@ -19,7 +19,7 @@ echo $calcul;
 
 $reponse = '<stong>D</strong>';
 echo '<br/> la réponse ultime c\'est la réponse $reponse' ;
-echo "<br/> la réponse ultime c\'est la réponse $reponse" ;
+echo "<br/> la réponse ultime c\'est la réponse $reponse <br/>" ;
 
 /****** Démo Booléen ******/
 
@@ -28,11 +28,11 @@ $cielEstBleu = true;
 //ici on met la condition que SI $cielEstBleu est vrai alors...
 if ($cielEstBleu == true){
     // ... on met le premier echo
-    echo 'nous sommes bien sur Terre';
+    echo 'nous sommes bien sur Terre. <br/>';
 }
 // SINON on applique l'autre echo
 else{
-    echo ' O_O\' ';
+    echo ' O_O\' <br/>';
 }
 
 //on retente en mettant false à notre variable $cielEstBleu
@@ -42,11 +42,11 @@ $cielEstBleu = false;
 //ici on met la condition que SI $cielEstBleu est vrai alors...
 if ($cielEstBleu == true){
     // ... on met le premier echo
-    echo 'nous sommes bien sur Terre';
+    echo 'nous sommes bien sur Terre. <br/>';
 }
 // SINON on applique l'autre echo
 else{
-    echo ' O_O\' ';
+    echo ' O_O\' <br/>';
 }
 
 ?>
