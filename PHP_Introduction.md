@@ -84,6 +84,10 @@ echo 'qui sont les meilleurs : ' . $bestOfTeam . ' Bien sûr !'
 
 A savoir que pour la cancaténation seul le `.` est nécessaire. Cependant pour la lisibilité (surtout au début) il est recommendé d'ajouter des espaces. Cependant le code fonctionnera très bien sans.
 
+### Opérateurs d'incrémentation et décrémentation
+
+S'ils sonnent comme la légende du Yéti, cela n'en est rien. Ces petites choses ne sont ni plus, ni moins que des éléments permettant d'ajouter ou de soustraire à nos variables.
+
 ## Les tableaux
 
 Il existe plusieurs tableaux. Mais déjà il faut savoir que ce tableau sera rangé dans une variable à savoir :
@@ -188,3 +192,9 @@ Ce tableau est très utile pour compacter des données dans des tableaux et appe
 Ce tableau n'est pas souvent appelé comme cela et l'on priviligiera l'emploi de `foreach` à cet égard. (voir exemple dans /test/test.php ou le sujet consacré aux boucles pour plus d'informations).
 
 Comme vous pouvez aussi le constater, le tableau multidimmensionnel peut aussi être associatif, enrichissant ainsi les possibilités. A vous de voir lequel convient le mieux à votre situation et vos besoins.
+
+## Les Conditions
+
+### IF et ELSE
+
+## Les Boucles
