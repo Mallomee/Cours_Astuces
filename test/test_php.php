@@ -69,8 +69,9 @@ $bestOfTeam = [
 ];
 
 foreach($bestOfTeam as $nameTeam => $tableau ){
-    echo $nameTeam;
+    echo '<ul>' . $nameTeam;
     foreach ($tableau as $value){
-        echo $value;
+        echo '<li>' . $value . '</li>';
     }
+    echo '</ul>';
 }
