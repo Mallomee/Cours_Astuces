@@ -6,19 +6,24 @@ Php est un langage qui peut permettre l'emploi de données pour la création de 
 
 ## Les Bases
 
-Pour PHP, on peut créer une variable qu'on rappelera à chaque fois avec l'écriture avec laquelle on l'a créé.
+### Variable
 
-`$variable = 'mon contenu';`
-
-Cette variable peut contenir divers éléments comme :
-
-- un tableau (voir section tableau pour plus d'infos)
+Pour PHP, on peut créer une variable qu'on rappelera à chaque fois avec l'écriture avec laquelle on l'a créé. Cette variable restera stockée dans la page où elle aura été chargée.
 
 ```php
-    $tableau = [
-        maClé => maValeur,
-    ]
+$variable = 'mon contenu';
+
+echo $variable;
 ```
+
+Il existe plusieurs types de variables :
+
+- du texte (`string`)
+- des boléens (`bool`)
+- des nombres entiers (`int`)
+- des nombres décimaux (`float`)
+
+On peut aussi y inclure des calculs ou des tableaux ou même encore d'autres variables
 
 ## Les tableaux
 
