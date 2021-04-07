@@ -19,11 +19,11 @@ echo $variable;
 Il existe plusieurs types de variables :
 
 - du texte (`string`)
-- des boléens (`bool`)
+- des booléens (`bool`)
 - des nombres entiers (`int`)
 - des nombres décimaux (`float`)
 
-On peut aussi y inclure des calculs ou des tableaux ou même encore d'autres variables ! Bref c'est un couteau suisse ! Voyons quelques petites choses de sa part.
+On peut aussi y inclure des calculs ou des tableaux ou même encore d'autres variables ! Bref c'est un couteau suisse ! Voyons quelques petites choses qu'il peut faire.
 
 ```php
 $a = 3;
@@ -34,7 +34,12 @@ echo $calcul;
 
 ```
 
-Ici nous avons défini dans `$a` un **int** de *3* et dans `$b` un **float** de 3.5 ( /!\ attention à bien mettre un `.` et non une `,` à vos nombres). Enfin dans `$calcul` nous effectuons l'addition des deux et le stockons dans la variable que l'on appelle avec un écho (dans le dossier test et dans test_php.php, vous aurez le résultat de cette dernière)
+Ici nous avons défini dans `$a` un **int** de *3* et dans `$b` un **float** de 3.5 ( /!\ attention à bien mettre un `.` et non une `,` à vos nombres décimaux). Enfin dans `$calcul` nous effectuons l'addition des deux et le stockons dans la variable que l'on appelle avec un écho (dans le fichier /test/test_php.php, vous aurez le résultat de cette dernière)
+
+#### String
+
+Le texte s'écrit soit entre `"ton texte"` ou entre `'ton texte'`. La première version demandera à PHP de vérifier son contenu et ainsi d'y voir s'il y a des variables ou autre alors que pour le second cas, il retranscrira tel quel le contenu.
+
 
 
 ## Les tableaux
