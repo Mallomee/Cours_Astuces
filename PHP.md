@@ -48,6 +48,21 @@ Un booléen sert souvent dans des conditions car il retourne une valeur vrai (`t
 
 Ces deux derniers permettent de regrouper des nombres entier (avec `int`) ou à virgule (`float`). Cela permet d'effectuer des calculs, de récupérer des données qu'on pourra aussi convertir en nombre etc comme le premier exemple avec le calcul.
 
+### La cancaténation
+
+Maintenant qu'on a notre belle variable, ça serait bien de s'en servir ou même de l'enrichir ! Et quoi de mieux que la cancaténation pour cela ! La cancaténation permet d'ajouter plusieurs éléments dans une variable (entre autre). Elle se fait en mettant simplement un `.` entre deux élements distincts.
+
+Exemple :
+```php
+
+$bestOfTeam = 'Shéhérazade';
+
+echo 'qui sont les meilleurs : ' . $bestOfTeam . ' Bien sûr !'
+
+```
+
+A savoir que pour la cancaténation seul le `.` est nécessaire. Cependant pour la lisibilité (surtout au début) il est recommendé d'ajouter des espaces. Cependant le code fonctionnera très bien sans.
+
 ## Les tableaux
 
 Il existe plusieurs tableaux. Mais déjà il faut savoir que ce tableau sera rangé dans une variable à savoir
