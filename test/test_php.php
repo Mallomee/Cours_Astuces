@@ -1,4 +1,15 @@
+<h1>Les bases de PHP</h1>
+<strong>Exemple</strong>
+<p><?= $texte?></p>
+
+<strong>Exemple 2</strong>
+<p>ce qui suit est dans une balise PHP complète.</p>
 <?php 
+// Avant de commencer
+
+$texte = 'Ce texte est en PHP, n\'est-ce pas surprenant ? Il a été posté avec ce code : <?= $texte?> ';
+
+
 // Voici un exemple de calcul simple
 
 // $a est un int
