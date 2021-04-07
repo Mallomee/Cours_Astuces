@@ -44,7 +44,9 @@ Le texte s'écrit soit entre `"ton texte"` ou entre `'ton texte'`. La première 
 
 Un booléen sert souvent dans des conditions car il retourne une valeur vrai (`true`) ou fausse (`false`). On peut l'appliquer ainsi à une variable et le changer en fonction de si les conditions sont remplis ou non. (voir /test/test_php.php pour un exemple concret)
 
+#### Int et Float
 
+Ces deux derniers permettent de regrouper des nombres entier (avec `int`) ou à virgule (`float`). Cela permet d'effectuer des calculs, de récupérer des données qu'on pourra aussi convertir en nombre etc comme le premier exemple avec le calcul.
 
 ## Les tableaux
 
@@ -67,7 +69,7 @@ Exemple :
     ]
 ```
 
-Dans mon tableau, mes valeurs seront chacune séparer par un ',' et elles seront automatiquement rangés dans des tiroirs. Le premier tiroir sera l'index 0, le second sera l'index 1 et ainsi de suite. Si on reprend l'exemple précédent on aura :
+Dans mon tableau, mes valeurs seront chacune séparé par un ',' et elles seront automatiquement rangés dans des tiroirs. Le premier tiroir sera l'index 0, le second sera l'index 1 et ainsi de suite. Si on reprend l'exemple précédent on aura :
 
 Exemple : 
 
@@ -80,6 +82,7 @@ Exemple :
     ]
 ```
 
+Avant
 Ce tableau ci-dessus est un tableau associatif et dans mon premier index étiquetté 0, la clé sera 0. Si besoin on peut changer ses clés si on le souhaite en les renommant.
 
 Exemple : 

@@ -18,13 +18,14 @@ echo $calcul;
 // Ici voici deux exemples de texte l'un entre " " et l'autre entre ' ' avec une variable incluse pour comprendre la différence mmême si elle est déjà visible dans le code ci-dessous
 
 $reponse = '<stong>D</strong>';
-echo '<br/> la réponse ultime c\'est la réponse $reponse' ;
-echo "<br/> la réponse ultime c\'est la réponse $reponse <br/>" ;
+echo '<p> la réponse ultime c\'est la réponse $reponse.' ;
+echo "<br/> la réponse ultime c\'est la réponse $reponse. </p>" ;
 
 /****** Démo Booléen ******/
 
 $cielEstBleu = true;
 
+echo 'Pour mon premier IF avec TRUE : <br/>';
 //ici on met la condition que SI $cielEstBleu est vrai alors...
 if ($cielEstBleu == true){
     // ... on met le premier echo
@@ -39,6 +40,7 @@ else{
 
 $cielEstBleu = false;
 
+echo '<br/> Pour mon second IF avec FALSE : <br/>';
 //ici on met la condition que SI $cielEstBleu est vrai alors...
 if ($cielEstBleu == true){
     // ... on met le premier echo
