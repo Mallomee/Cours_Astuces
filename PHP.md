@@ -123,3 +123,25 @@ Exemple :
 ```
 
 Ainsi si l'on veut appeler AlexisOclock on fera `$profTeam['Phoebe']` et on ira chercher la valeur contenue dans la clé Phoebe qui n'est autre que AlexisOclock.
+
+Cela est avantageux si l'on a des tableaux long car ça nous permet de se repérer plus facilement plutôt que compter à quel index on en est (*le dev est flemmard m'a-t-on dit un jour et moi je ne compte pas plus loin de mes doigts*).
+
+### Tableau Multidimensionnel
+
+Alors lui c'est le plus vil et complet des tableaux PHP. Il s'agit d'un tableau dans lequel on peut avoir d'autres tableaux.
+
+```php
+    $bestOfTeam = [
+        $sheherazadesTeam => [
+            "Atouss", // son index sera 0
+            "Hugo-Jacques", // son index sera 1
+            "Clelia", // 2
+            "Céline", // 3
+        ],
+        $profTeam => [
+            'Prue' => 'CharlesOclock',
+            'Piper' => 'GregOclock',
+            'Phoebe' => 'AlexisOclock'
+        ]
+    ]
+```
