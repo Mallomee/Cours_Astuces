@@ -34,6 +34,7 @@ Pour PHP, on peut créer une variable qu'on rappelera à chaque fois avec l'écr
 $variable = 'mon contenu';
 
 echo $variable;
+// l'echo permet d'afficher le contenue de la variable. Ici on aura 'mon contenu' qui s'affichera
 ```
 
 Il existe plusieurs types de variables :
@@ -51,6 +52,7 @@ $b = 3.5;
 $calcul = $a + $b;
 
 echo $calcul;
+// on aura ainsi le résultat du calcul qui s'affichera à savoir 6.5
 
 ```
 
@@ -78,8 +80,9 @@ Exemple :
 
 $bestOfTeam = 'Shéhérazade';
 
-echo 'qui sont les meilleurs : ' . $bestOfTeam . ' Bien sûr !'
-
+echo 'Qui sont les meilleurs : ' . $bestOfTeam . ' Bien sûr !'
+// l'echo affichera Qui sont les meilleurs : Shéhérazade Bien sûr !
+// ! pour la cancaténation de phrase, pensez bien à mettre des espaces car PHP ne les fait pas de lui-même entre les mots ou les éléments cancaténés ensemble
 ```
 
 A savoir que pour la cancaténation seul le `.` est nécessaire. Cependant pour la lisibilité (surtout au début) il est recommendé d'ajouter des espaces. Cependant le code fonctionnera très bien sans.
