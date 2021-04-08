@@ -22,7 +22,9 @@
 
 `git pull` récupère sur github tous ce qui a été ajouté (sur la branche où l'on se trouve ? A confirmer)
 
-`git branch` crée une branch
+`git branch` Nous montre les branches ainsi que celle où nous nous trouvons
+
+`git branch nomBranch` crée une nouvelle branch avec le nom souhaité sur la branche où vous étiez. Elle reprendra le code de cette dernière
 
 `git checkout -b "nomBranch"` crée une branch et nous déplace dans cette dernière
 
