@@ -2,9 +2,9 @@
 
 ## Sous Linux
 
-`cd`
+`cd /dossierOùOnVeutAller` nous déplace vers le dossier où l'on veut se rentre (on peut enchainer les dossiers: ./dossierParent/DossierEnfant)
 
-`ls`
+`ls` liste les dossiers présent à l'endroit où vous effectuez le ls.
 
 `mkdir`
 
