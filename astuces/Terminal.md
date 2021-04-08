@@ -12,6 +12,8 @@
 
 ### Git
 
+documentations : https://git-scm.com/doc
+
 `git clone lienDuRepoACloner`
 
 `git add .` ou `git add cheminDuDossier` ajoute le travail effectué dans un carton que l'on garde sur notre machine
