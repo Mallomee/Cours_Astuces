@@ -20,6 +20,8 @@
 
 `git push` push le travail que l'on a mis en carton et qu'on a annoté.
 
+`git pull` récupère sur github tous ce qui a été ajouté (sur la branche où l'on se trouve ? A confirmer)
+
 `git branch` crée une branch
 
 `git checkout -b "nomBranch"` crée une branch et nous déplace dans cette dernière
