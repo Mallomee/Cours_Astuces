@@ -7,7 +7,7 @@ Cette fiche contient :
 - Les Tableaux
 - Les Conditions
 - Les Boucles (à venir)
-- La Syntaxe Alternative
+- La Syntaxe Alternative (en cours)
 
 ## Introduction
 
