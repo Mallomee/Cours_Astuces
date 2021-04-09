@@ -6,9 +6,9 @@
 
 `ls` liste les dossiers présent à l'endroit où vous effectuez le ls.
 
-`mkdir`
+`mkdir NameNewDossier` créer un dossier.
 
-`rmdir`
+`rmdir NameNewDossier` supprime un dossier **vide**.
 
 
 `cat nom_ficher.md` oeret de lire le contenu d'un fichier Markdown
