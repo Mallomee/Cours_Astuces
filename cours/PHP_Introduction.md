@@ -243,7 +243,8 @@ if ($ciel == 'bleu' && $herbe == 'verte' && ($soleil == 'brille' || $nuit == 'lu
 }
  ```
 
-Ici j'oblige le **IF** à avoir la condition `$ciel == 'bleu'`, `$herbe == 'verte'`  mais aussi : **soit** `$soleil == 'brille'` **OU** `$nuit == 'lune'`. Si le soleil ne brille pas mais que la nuit il y a la lune, il validera quand même ma condition et vice-versa.
+Ici j'oblige le **IF** à avoir la condition `$ciel == 'bleu'`, `$herbe == 'verte'`  mais aussi :
+ **soit** `$soleil == 'brille'` **OU** `$nuit == 'lune'`. Si le soleil ne brille pas mais que la nuit il y a la lune, il validera quand même ma condition et vice-versa.
 
 **Note** 
 
