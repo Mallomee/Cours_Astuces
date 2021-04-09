@@ -60,3 +60,5 @@ documentations : https://git-scm.com/doc
 `git checkout <hash-commit>` permettra d'accéder aux fichier de ce commit. Il faut récupérer le hash correspondant et le mettre comme suit :
 `git checkout 5657d3372ca31aadb3da1d99c798833718493b04`
 On peut aussi juste écrire les premier caractères de 'lidentifiant(hash) du commit `git checkout 5657d3`
+
+`git branch -d branchName` supprime la branche sus-nommée. Il ne faut pas être dessus avant de la supprimer
