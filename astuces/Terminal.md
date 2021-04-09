@@ -15,8 +15,8 @@
 
 faire une recherche d'une chaine de caractère précise dans un fichier Markdown :
 
-`cat nom_ficher.md | grep 'Chaine recherchée'` : recherche sensible à la casse (majuscule/minuscule)
-`cat nom_ficher.md | grep -i 'Chaine recherchée'` : recherche insensible à la casse
+- `cat nom_ficher.md | grep 'Chaine recherchée'` : recherche sensible à la casse (majuscule/minuscule)
+- `cat nom_ficher.md | grep -i 'Chaine recherchée'` : recherche insensible à la casse
 
 ### Git
 
@@ -45,3 +45,14 @@ documentations : https://git-scm.com/doc
 `git checkout -b "nomBranch"` crée une branch et nous déplace dans cette dernière
 
 `git checkout "nomBranchOùOnVeutAller"` Nous enmène dans la branch que l'on a cité
+
+`git log` permet de voir la liste des différents commits effectuée sur la branche où nous sommes (s'il y a beaucoup de résultat, on peut se déplacer avec les flèches *up* et *down* et quitter cette navigation avec *Q*)
+
+`git log --grep 'chaine recherchée'` permet de lsiter les commit contenant une chaine précise
+
+`git log --author 'auteur recherché'` permet de lsiter les commit contenant un autheur précis
+
+`git checkout <hash-commit>` permettra d'accéder aux fichier de ce commit. Il faut récupérer le hash correspondant et le mettre comme suit :
+`git checkout 5657d3372ca31aadb3da1d99c798833718493b04`
+On peut aussi juste écrire les premier caractères de 'lidentifiant(hash) du commit `git checkout 5657d3`
+
