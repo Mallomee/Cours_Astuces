@@ -9,6 +9,7 @@ $texte = 'Ce texte est en PHP, n\'est-ce pas surprenant ? Il a été posté avan
 
 <strong>Exemple 2</strong>
 <p>ce qui suit est dans une balise PHP complète.</p>
+
 <?php 
 // Voici un exemple de calcul simple
 

@@ -12,6 +12,10 @@
 
 `rmdir NameNewDossier` supprime un dossier **vide**.
 
+`touch nomFichier.extension` permet de créer un fichier avec l'extension de votre choix
+
+`rm` supprime un dossier ou un fichier. pour une fichier `rm monfichier.extension` ou `rm -r mondossier/` pour un dossier.
+
 `cat nom_ficher.md` permet de lire le contenu d'un fichier Markdown
 
 faire une recherche d'une chaine de caractère précise dans un fichier Markdown :
@@ -49,9 +53,9 @@ documentations : https://git-scm.com/doc
 
 `git log` permet de voir la liste des différents commits effectuée sur la branche où nous sommes (s'il y a beaucoup de résultat, on peut se déplacer avec les flèches *up* et *down* et quitter cette navigation avec *Q*)
 
-`git log --grep 'chaine recherchée'` permet de lsiter les commit contenant une chaine précise
+`git log --grep 'chaine recherchée'` permet de lister les commit contenant une chaine précise
 
-`git log --author 'auteur recherché'` permet de lsiter les commit contenant un autheur précis
+`git log --author 'auteur recherché'` permet de lister les commit contenant un autheur précis
 
 `git checkout <hash-commit>` permettra d'accéder aux fichier de ce commit. Il faut récupérer le hash correspondant et le mettre comme suit :
 `git checkout 5657d3372ca31aadb3da1d99c798833718493b04`
