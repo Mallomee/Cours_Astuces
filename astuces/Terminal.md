@@ -2,11 +2,13 @@
 
 ## Sous Linux
 
-`cd /dossierOùOnVeutAller` nous déplace vers le dossier où l'on veut se rentre (on peut enchainer les dossiers: ./dossierParent/DossierEnfant)
+`pwd` vous affiche où vous vous trouvez (répertoire/dossier où vous êtes)
 
-`ls` liste les dossiers présent à l'endroit où vous effectuez le ls.
+`cd ./dossierOùOnVeutAller` vous déplace vers le dossier où vous voulez vous rendre (on peut enchainer les dossiers: ./dossierParent/DossierEnfant). A savoir que `cd ..` vous fera revenir au dossier parent de celui où vous êtes.
 
-`mkdir NameNewDossier` créer un dossier.
+`ls` liste les dossiers présent à l'endroit où vous effectuez le ls.`ls -a` permet d'afficher les dossiers cachés et `ls -l` permet d'afficher les dossiers sous forme de liste.
+
+`mkdir NameNewDossier` crée un dossier. Vous pouvez aussi créer un dossier via un chemin. Exemple `mkdir ./chemin/MonNouveauDossier` ira créer un nouvau dossier dans le dossier enfant 'chemin' de celui où nous sommes (le `.` indiquant que c'est le dossier où nous nous trouvons)
 
 `rmdir NameNewDossier` supprime un dossier **vide**.
 
