@@ -91,7 +91,7 @@ A savoir que pour la cancaténation seul le `.` est nécessaire. Cependant pour 
 
 ### Opérateurs d'incrémentation et décrémentation
 
-S'ils sonnent comme la légende du Yéti, cela n'en est rien. Ces petites choses ne sont ni plus, ni moins que des éléments permettant d'ajouter ou de soustraire à nos variables.
+S'ils sonnent comme la légende du Yéti, cela n'en est rien. Ces petites choses ne sont ni plus, ni moins que des éléments permettant d'ajouter ou de soustraire à nos variables.(EN COURS)
 
 ## Les tableaux
 
