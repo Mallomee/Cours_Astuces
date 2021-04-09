@@ -10,7 +10,6 @@
 
 `rmdir NameNewDossier` supprime un dossier **vide**.
 
-
 `cat nom_ficher.md` oeret de lire le contenu d'un fichier Markdown
 
 faire une recherche d'une chaine de caractère précise dans un fichier Markdown :
