@@ -91,3 +91,13 @@ foreach($bestOfTeam as $nameTeam => $tableau ){
     }
     echo '</ul>';
 }
+
+
+$a=5;
+$a++; //qui correspond à 5 + 1
+echo $a . '<br/>';
+++$a; //qui correspond à 1 + 5
+echo $a . '<br/>';
+$a--; //qui correspond à 5 - 1
+echo $a . '<br/>';
+--$a; //qui correspond à 1 - 5
