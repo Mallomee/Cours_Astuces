@@ -1,8 +1,9 @@
-## La Syntaxe Alternative
+# La Syntaxe Alternative
 
 Pour implémenter du PHP avec du html on priviligiera la synthaxe alternative qui permet de limiter le php dans le HTML et évitera ainsi de passer à côté d'erreur qui ne pourraient être visible dans l'un et l'autre des codes.
 
-Ainsi en bonne pratique on priviligiera 
+Ainsi en bonne pratique on priviligiera
+
 ```php
 <?php if ($verite): ?>
     <p>Alors la vérité est vrai</p>
