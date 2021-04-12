@@ -64,3 +64,5 @@ documentations : https://git-scm.com/doc
 On peut aussi juste écrire les premier caractères de 'lidentifiant(hash) du commit `git checkout 5657d3`
 
 `git branch -d branchName` supprime la branche sus-nommée. Il ne faut pas être dessus avant de la supprimer
+
+`git merge nomDeLaBrancheAMerge`on se place dans la branche où l'on veut merge et on dit quel dossier on veut merge dans la commande.
