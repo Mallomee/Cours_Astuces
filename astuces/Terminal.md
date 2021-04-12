@@ -27,7 +27,7 @@ faire une recherche d'une chaine de caractère précise dans un fichier Markdown
 
 ### Git
 
-documentations : https://git-scm.com/doc
+documentations : https://git-scm.com/doc https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/intro-git/
 
 #### Créer un nouveau repo
 
