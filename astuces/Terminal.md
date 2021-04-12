@@ -4,6 +4,8 @@
 
 `pwd` vous affiche où vous vous trouvez (répertoire/dossier où vous êtes)
 
+`clear` vide le terminal pour le remettre au propre
+
 `cd ./dossierOùOnVeutAller` vous déplace vers le dossier où vous voulez vous rendre (on peut enchainer les dossiers: ./dossierParent/DossierEnfant). A savoir que `cd ..` vous fera revenir au dossier parent de celui où vous êtes.
 
 `ls` liste les dossiers présent à l'endroit où vous effectuez le ls.`ls -a` permet d'afficher les dossiers cachés et `ls -l` permet d'afficher les dossiers sous forme de liste.

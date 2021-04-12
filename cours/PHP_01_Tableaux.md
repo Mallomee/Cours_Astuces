@@ -1,3 +1,5 @@
+# PHP
+
 ## Les tableaux
 
 Il existe plusieurs tableaux. Mais déjà il faut savoir que ce tableau sera rangé dans une variable à savoir :
