@@ -11,15 +11,13 @@ Php est un langage qui peut permettre l'emploi de données pour la création de 
 
 ( http://ivmad.free.fr/pi/PHP/Modele-php-html.jpg )
 
-
-
 ## Les Bases
 
 ### Avant toute chose
 
-PHP est un langage donc comme tout langage, avant de s'y mettre c'est toujours sympa de dire comment on parle. En effet dans des feuilles PHP on pourra inclure du HTML et y ajouter des éléments de PHP aussi il faut savoir que pour commencer à coder en PHP, il faut ouvrir une balise comme suit : `<?php` et la fermer ainsi : `?>`.
+PHP est un langage, donc comme tout langage, avant de s'y mettre c'est toujours sympa de dire comment on parle. En effet dans des feuilles PHP on pourra inclure du HTML et y ajouter des éléments de PHP aussi il faut savoir que pour commencer à coder en PHP, il faut ouvrir une balise comme suit : `<?php` et la fermer ainsi : `?>`.
 
-Il existe aussi un raccourci si l'on ne souhaite que faire un echo. Il s'agit de : `<?=` qui se fermera comme une balise PHP standard.
+Il existe aussi un raccourci si l'on ne souhaite que faire un `echo`. Il s'agit de : `<?=` qui se fermera comme une balise PHP standard.
 
 Autre information à bien connaître : il faut que vos données en PHP (tableau, variable etc) soit placé avant le HTML qui sera appelé à s'en servir. Sinon vous aurez le droit au magnifique panneau de PHP (reconnaissable entre tous, il est orange et moche).
 
@@ -31,7 +29,7 @@ Pour PHP, on peut créer une variable qu'on rappelera à chaque fois avec l'écr
 $variable = 'mon contenu';
 
 echo $variable;
-// l'echo permet d'afficher le contenue de la variable. Ici on aura 'mon contenu' qui s'affichera
+// l'echo permet d'afficher le contenu de la variable. Ici on aura 'mon contenu' qui s'affichera
 ```
 
 Il existe plusieurs types de variables :
@@ -49,7 +47,7 @@ $b = 3.5;
 $calcul = $a + $b;
 
 echo $calcul;
-// on aura ainsi le résultat du calcul qui s'affichera à savoir 6.5
+// on aura ainsi le résultat du calcul qui s'affichera, à savoir 6.5
 
 ```
 
@@ -80,7 +78,7 @@ $bestOfTeam = 'Shéhérazade';
 echo 'Qui sont les meilleurs : ' . $bestOfTeam . ' Bien sûr !'
 // l'echo affichera Qui sont les meilleurs : Shéhérazade Bien sûr !
 // ! pour la cancaténation de phrase, pensez bien à mettre des espaces car PHP ne les fait pas de lui-même
-// entre les mots ou les éléments cancaténés ensemble
+// entre les mots et/ou les éléments cancaténés ensemble
 ```
 
 A savoir que pour la cancaténation seul le `.` est nécessaire. Cependant pour la lisibilité (surtout au début) il est recommendé d'ajouter des espaces. Cependant le code fonctionnera très bien sans.
@@ -99,4 +97,6 @@ $a-- //qui correspond à 5 - 1
 --$a //qui correspond à 5 - 1
 ```
 
-la différence entre incrémentation à l'avant et à l'arrière est que si le résultat revient au même
+la différence ne semble pas execptionnel mais pour plus de compréhension : https://www.php.net/manual/fr/language.operators.increment.php
+
+Il présente des exemples qui me semblent très parlant et clair en l'occurence.
