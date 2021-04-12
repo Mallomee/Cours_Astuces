@@ -29,6 +29,16 @@ faire une recherche d'une chaine de caractère précise dans un fichier Markdown
 
 documentations : https://git-scm.com/doc
 
+#### Créer un nouveau repo
+
+- Se mettre dans le répertoire du dossier
+- faire un `git init` pour que ce dossier soit initialisé en projet git.
+- faire ensuite les commandes comme pour ajouter du contenu à un repo existant `git add .`, puis `git commit -m "Nom Du commit"`.
+- Créer le projet sur GitHub.com sans mettre de readme (afin d'éviter les conflits entre les deux projets) puis copier le lien du répertoire (situé en haut à droite et se terminant généralement pas `.git`)
+- `git remote add origin LienCopié` en manip dans la console pour désigner le répertoire de git comme cible du projet et répondre aux informations demandées
+- `git remote -v` vérifie que tout marche
+- `git push origin master` qui va tout envoyé tous vos fichiers en un premier push.
+
 #### Récupérer un repo
 
 `git clone lienDuRepoACloner`
@@ -66,3 +76,4 @@ On peut aussi juste écrire les premier caractères de 'lidentifiant(hash) du co
 `git branch -d branchName` supprime la branche sus-nommée. Il ne faut pas être dessus avant de la supprimer
 
 `git merge nomDeLaBrancheAMerge`on se place dans la branche où l'on veut merge (via checkout) et on dit quel dossier on veut merge dans la commande.
+
