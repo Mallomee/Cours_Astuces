@@ -24,5 +24,7 @@ Date:   Fri Mar 12 18:03:35 2021 +0100
 
 - effectuer un `git branch NomDeLaBranchOùOnLeMet HachDuCommitInitial`
 - faire un `git stash` qui garde vos corrections sur la branch master mais qui vous permet d'aller ensuite sur la branch où vous avez mis les exercices vierges.
+- se rendre ensuite sur la branch nouvellement créée avec un `git checkout nomDeLaBranch`.
+-  Y'a plus qu'à reprendre l'exo !
 
 Pensez à recréer une branch si vous souhaitez refaire des commits de vos exercices pour éviter d'effectuer à chaque fois cette manipulation. 
