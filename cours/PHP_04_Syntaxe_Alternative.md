@@ -18,4 +18,12 @@ Ainsi en bonne pratique on priviligiera
 
 ## Pour les boucles
 
+### while
 
+```php
+while (expression):
+    commandes
+
+endwhile;
+
+```
