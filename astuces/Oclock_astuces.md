@@ -14,7 +14,7 @@ Avec **VSC** Les liveshare sont aussi un bon moyen de coder en équipe. Vous pou
 - lancer la console et effectuer un `git log`
 - copier le hach du commit initial (ça correspondra à `d3585a1e43a386416b4d3f15d8870afd713f8547` dans l'exemple ci-dessous)
 
-```
+```bash
 commit d3585a1e43a386416b4d3f15d8870afd713f8547
 Author: Christophe Deneuve <33314621+christopheOclock@users.noreply.github.com>
 Date:   Fri Mar 12 18:03:35 2021 +0100
