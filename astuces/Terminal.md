@@ -10,7 +10,7 @@
 
 `ls` liste les dossiers présent à l'endroit où vous effectuez le ls.`ls -a` permet d'afficher les dossiers cachés et `ls -l` permet d'afficher les dossiers sous forme de liste.
 
-`mkdir NameNewDossier` crée un dossier. Vous pouvez aussi créer un dossier via un chemin. Exemple `mkdir ./chemin/MonNouveauDossier` ira créer un nouvau dossier dans le dossier enfant 'chemin' de celui où nous sommes (le `.` indiquant que c'est le dossier où nous nous trouvons)
+`mkdir NameNewDossier` crée un dossier. Vous pouvez aussi créer un dossier via un chemin. Exemple `mkdir ./chemin/MonNouveauDossier` ira créer un nouvau dossier dans le dossier enfant 'chemin' de celui où nous sommes (le `.` indiquant que  c'est le dossier où nous nous trouvons)
 
 `rmdir NameNewDossier` supprime un dossier **vide**.
 
