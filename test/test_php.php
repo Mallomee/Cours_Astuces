@@ -101,7 +101,3 @@ echo $a . '<br/>';
 $a--; //qui correspond à 5 - 1
 echo $a . '<br/>';
 --$a; //qui correspond à 1 - 5
-
-haaaa en faite on a un donjon (notre classe). Si on veut y aller on fait une instance avec notre groupe (on créer un donjons mais qui sera unique à notre groupe)
-- class donjon{}
-- $groupeHero = new donjon()
