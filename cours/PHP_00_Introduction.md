@@ -97,6 +97,6 @@ $a-- //qui correspond à 5 - 1
 --$a //qui correspond à 5 - 1
 ```
 
-la différence ne semble pas execptionnel mais pour plus de compréhension : https://www.php.net/manual/fr/language.operators.increment.php
+la différence ne semble pas execeptionnel mais pour plus de compréhension : https://www.php.net/manual/fr/language.operators.increment.php
 
 Il présente des exemples qui me semblent très parlant et clair en l'occurence.
