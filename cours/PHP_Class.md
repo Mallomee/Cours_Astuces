@@ -4,7 +4,7 @@ Exemple:
 
 ```php
 
-// On créer un donjon
+// On créer une class donjon
 class Donjon{
 //On y met deux paramètres
 public $player1;
