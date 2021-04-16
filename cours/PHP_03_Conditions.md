@@ -2,6 +2,14 @@
 
 ## Les Conditions
 
+### Opérateur de comparaison
+
+Les opérateurs de comparaison servent entre autre pour les conditions et comparent deux valeurs. Le tableau de PHP me semble très parlant pour le coup.
+
+https://www.php.net/manual/fr/language.operators.comparison.php
+
+https://www.php.net/manual/fr/types.comparisons.php
+
 ### IF et ELSE
 
 Comme le porte leurs noms, IF correspond à **si** et ElSE à **sinon**. Ces derniers permettent de poser des conditions du style :
