@@ -50,3 +50,120 @@ Apache va extraire la partie de l'URL et la stocker dans une variable d'environn
 ```
 
 On va donc changer les chemins relatifs (les link du header, les scripts du footer etc....).
+
+## Packagist
+
+https://packagist.org/
+
+il s'agit d'un site te permettant de chercher si tu as un code qui a déjà été codé pour te faciliter la tâche. On cherchera donc pour nous un code permettant de dynamiser nos routes grâce à https://packagist.org/packages/altorouter/altorouter et ainsi avoir des pages catégories qui soit dynamiques.
+
+## Composer
+
+pour savoir si composer est installer sur ta VM, il suffit d'entrer dans le terminal : `composer -v`. Si tu as pleins de lignes de commandes c'est bon, c'est ok.
+Pour le projet actuel : 
+
+- copier la commande composer require altorouter/altorouter présente ici https://packagist.org/packages/altorouter/altorouter en haut de la page
+- La coller dans le terminal, à la racine de votre projet
+- Appuyer sur entrée
+- Composer fait sa tambouille et install altorouter pour vous
+
+Il va crée le dossier ``vendor`` ainsi que deux fichiers ``composer.json`` et ``composer.lock``.
+
+Les fichiers:
+
+- composer.json
+- composer.lock
+
+ne sont pas a toucher. Il ne faudra JAMAIS toucher ou supprimer composer.lock. composer.json pourra être modifié plus tard, mais pas pour le moment.
+
+Le dossier vendor est créé par composer et contient toutes les dépendances que vous pourriez installer (require machin/machin). Vous ne devez jamais modifié ce qu'il y a dedans, sauf éventuellement pour débugger. Avant de push un travail on peut ignorer le dossier vendor pour éviter de tirer sur la bande passante. Il suffira ensuite de faire un `composer install` pour le remettre ensuite dans votre dossier.
+
+Quand je récupère un projet qui contient déjà un composer.json :
+
+- J'ouvre le terminal à la racine de mon projet, (à l'endroit ou est présent le composer.json)
+- J'execute la commande composer install
+- Composer télécharge et place toutes les dépendances nécessaires dans le dossier vendor
+- Ready to dev !
+
+doc supplémentaire : http://altorouter.com/usage/install.html
+
+### ignorer un dossier dans notre projet
+
+Si vous avez certains fichiers ou dossiers que vous ne souhaitez pas versionner (donc pas pousser sur github), comme un fichier qui contient de mots de passe parexemple, vous pouvez créer (si ce n'est pas fait) un fichier .gitignore à la racine de votre projet.
+Dans ce fichier, écrire le chemin vers le fichier ou dossier de votre choix.
+Vous pouvez ajouter un fichier ou dossier par ligne.
+
+```
+# ignore tous les dossiers vendor
+vendor/
+# ignore le dossier vendor à la racine
+/vendor
+# ignore le fichier tata.php dans le dossier toto
+/toto/tata.php
+```
+
+## Pour notre projet
+
+Petite récap de ou on vient et ou on va :
+
+- On a besoin de générer des routes complex
+- On a vu que c'était compliqué à faire nous même
+- On a découvert qu'alto router pouvait nous aider à faire ça
+- Pour l'installer on utilise composer, un petit outil/programme en ligne de commande qui permet d'installer des dépendances (alto router en est une par exemple) (composer est déjà installé sur votre machine)
+- On test tout ça
+- Ça marche pas ? Oui il faut require le fichier autoload.php présent dans le dossier ``vendor`` => ``require __DIR__ . '../vendor/autoload.php';`` dans l'index.php
+- Maintenant on a accès, dans notre projet, à toutes les fonctions, classes, méthodes présentes dans notre dossier ``vendor``
+- On instancie la classe AltoRouter: `$router = new AltoRouter();`
+- On va indiquer à AltRouter comment sont constituées nos URL et à partir d'où on souhaite qu'il commence à travailler en distinguant la différence entre le 'statique' (BASE_URI) et la partie route. ``$router->setBasePath($_SERVER['BASE_URI']);``. 
+- On va ensuite crée nos routes (faire du mapping) avec la méthode `$router->map();` en y mettant les paramètres comme suit : 
+
+```php
+$router->map(
+    'GET', // Méthode HTTP (GET ou POST)
+    '/', // L'url que l'on saisira dans le navigateur
+    [
+        'method' => 'home',
+        'controller' => 'MainController'
+    ], 
+    'main-home' // On donne un nom (un identifiant à la route)
+);
+```
+
+pour une route dynamique on fera ainsi : 
+
+```php
+// On va créer une nouvelle route pour les catégories
+// /catalogue/categorie/1
+// /catalogue/categorie/5
+
+$router->map(
+    'GET',
+    '/catalogue/categorie/[i:id]',// i pour integer, id sera la clé qui stockera cette valeur
+    [
+        'method' => 'category',
+        'controller' => 'CatalogController' 
+    ],
+    'catalog-category'
+);
+```
+
+- On stockera tout cela dans un tableau `$match = $router->match();`. Si la route existe il renvoit un tableau, sinon il retournera false.
+- On peut donc préparer le 404 et la correction du code actuel dans l'index.php
+
+```php
+if ($match !== false) {
+    // La page existe dans les routes : 
+    // Alors j'affiche la vue correspondante
+    // Si $pageToDisplay == home
+    // $routeData = $routes[$pageToDisplay];
+    $routeData = $match['target'];
+    $routeParams = $match['params'];
+
+    $methodToCall = $routeData['method']; // home
+    $controllerToCall = $routeData['controller']; // MainController    
+} else {
+    // La page n'existe pas !
+    $methodToCall = 'page404';
+    $controllerToCall = 'MainController';
+}
+```
