@@ -167,3 +167,7 @@ if ($match !== false) {
     $controllerToCall = 'MainController';
 }
 ```
+
+# Cet après midi
+
+On as fait le plan pour la BDD sur MOCODO (http://mocodo.wingi.net/) pour définir comment allait être nos tableaux et ce qu'on allait y stocker comme données.
