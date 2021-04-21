@@ -365,7 +365,7 @@ $viewVars = [
 
 Show lancera ensuite les trois require en prenant le `viewName` pour afficher le template demandé.
 
-## Et le résultat ? 
+## Et dans les Views, ça donne quoi ? 
 
 ```html
 <h2>
