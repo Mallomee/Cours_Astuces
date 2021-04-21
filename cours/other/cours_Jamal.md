@@ -168,6 +168,217 @@ if ($match !== false) {
 }
 ```
 
-# Cet après midi
+# l'après midi
 
-On as fait le plan pour la BDD sur MOCODO (http://mocodo.wingi.net/) pour définir comment allait être nos tableaux et ce qu'on allait y stocker comme données.
+On as fait le plan pour la BDD sur MOCODO (http://mocodo.wingi.net/) pour définir comment allait être nos tableaux et ce qu'on allait y stocker comme données. Cela permet d'avoir un plan pour savoir quoi mettre dans la BDD et comment agencer l'ensemble avec les intéractions entre les différents tableaux (donc données) pour les reprendre ensuite dans notre site.
+
+
+# Cour du 21/04
+
+## Les routes
+
+Sur ce cour nous avons mises en place toutes les routes comme suit :
+
+```php
+// Route pour l'affichage des produits d'une catégorie
+// /catalogue/type/5
+$router->map(
+    'GET', // la méthode HTTP qui est autorisée 
+
+    // i pour integer, 
+    // id sera la clé utilisée pour stocker la partie dynamique
+    '/catalogue/type/[i:id]',
+    [
+        'method' => 'type',
+        'controller' => 'CatalogController' 
+    ],
+    'catalog-type' // Ce nom doit être unique
+);
+```
+
+## Les Controllers
+
+nous stockons plusieurs paramètres dans notre fonction dont la method (ici c'est `type`) ainsi que le `controller`. Si nous avons bien effectué le require, dans l'index, cela nous fait donc quitter le `index.php` pour nous rendre dans le `CatalogController.php` pour trouver l'objet du même nom.
+
+```php
+class CatalogController {
+        /**
+        * Méthode permettant l'affichage d'un type selon son identifiant
+        *
+        * @param Array $params
+        * @return void
+        */
+
+        public function type($params) {
+
+        $id = $params['id'];
+
+        // On instancie le model (Classe Product)
+        $typeObjet = new Type();
+
+        // On appelle la méthode findAll de la classe Product
+        $type = $typeObjet->findAll();
+        // views/type.tpl.php
+        $this->show('type', [
+            'id' => $id,
+            'allTypes' => $type
+        ]);
+    }
+
+    /**
+     * Méthode qui s'occupe d'afficher la page grace aux différents templates
+     *
+     * @param string $viewName
+     * @param array $viewVars
+     * @return void
+     */
+
+    private function show($viewName, $viewVars=[]) {
+        // $viewVars est disponible dans chaque fichier de vue
+        require_once __DIR__.'/../views/header.tpl.php';
+        require_once __DIR__.'/../views/'.$viewName.'.tpl.php';
+        require_once __DIR__.'/../views/footer.tpl.php';
+    }
+}
+```
+
+Comme l'on peut le voir dans cet extrait repris du repo du cour, nous avons deux fonction : `type` et `show`. Dans un premier temps, nous déclencherons la méthode type appeler plus tôt dans l'index grâce à la fonction `$router->map()`. L'on constate que nous stockons l'id dans une variable `$id`, ensuite nous stockons un objet dans une variable nommé `$typeObject`. 
+
+## Les Models
+
+Cependant nous allons voir ce que c'est que cette objet pour bien comprendre les étapes. Un require dans `l'index.php` des models est nécessaire au bon fonctionnement de la machine.
+Ainsi cela nous permettra d'aller dans le model `Type.php`
+
+```php
+class Type{
+    private $id;
+    private $name;
+    private $footerOrder;
+    private $createdAt;
+    private $updatedAt;
+
+    public function findAll(){
+        // 1) On se connecte à la BDD en créer un objet PDO        
+        $pdo = Database::getPDO();
+
+        // 2) On prépare la requete SQL
+        $sql = 'SELECT * FROM type';
+
+        // 3) On execute la requete SQL
+        $pdoStatement = $pdo->query($sql);
+        
+        // 4) On récupère les résultats
+        // $results = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+        $results = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'type');
+
+        // 5) On retourne le résultat
+        return $results;
+    }
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Get the value of name
+     */ 
+    public function getName()
+    {
+        return $this->name;
+    }
+    
+    /**
+     * Set the value of name
+     *
+     * @return  self
+     */ 
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+}
+```
+
+dans cet extrait raccourci, nous voyons les propriétés de la class `Type` que nous avons repris dans la BDD sur Adminer. Nous avons passé toutes ses fonctions en private. Il faudra donc prévoir des get pour pouvoir les récupérer ainsi que des set pour les changer si nécessaire (l'`$id` par exemple n'en ayant pas besoin vu qu'il ne doit pas être changé).
+
+Nous créerons aussi une fonction `findAll()` dans laquelle nous appellerons un code placé dans le dossier `Utils` et dans lequel nous irons chercher toutes les infos dans la BDD. Il s'agit de `$pdo = Database::getPDO();`. Cela nous permet ensuite de préparer une commande pour localiser ce que l'on veut avec la commande `$sql = 'SELECT * FROM type';` qui n'est autre qu'une requête en SQL que l'on fait ensuite avec `$pdoStatement = $pdo->query($sql);`. On stockera ensuite les résultats avec la dernière commande `$results = $pdoStatement->fetchAll(PDO::FETCH_CLASS, 'type');` qu'on retourne avec le `return $results` de fin.
+
+
+## Retour dans le CatalogController
+
+On revient donc dans notre fonction `type` qui est dans la `class CatalogController `
+
+```php
+class CatalogController {
+        /**
+        * Méthode permettant l'affichage d'un type selon son identifiant
+        *
+        * @param Array $params
+        * @return void
+        */
+
+        public function type($params) {
+
+        $id = $params['id'];
+
+        // On instancie le model (Classe Type)
+        $typeObjet = new Type();
+
+        // On appelle la méthode findAll de la classe Type
+        $type = $typeObjet->findAll();
+        // views/type.tpl.php
+        $this->show('type', [
+            'id' => $id,
+            'allTypes' => $type
+        ]);
+    }
+
+    /**
+     * Méthode qui s'occupe d'afficher la page grace aux différents templates
+     *
+     * @param string $viewName
+     * @param array $viewVars
+     * @return void
+     */
+
+    private function show($viewName, $viewVars=[]) {
+        // $viewVars est disponible dans chaque fichier de vue
+        require_once __DIR__.'/../views/header.tpl.php';
+        require_once __DIR__.'/../views/'.$viewName.'.tpl.php';
+        require_once __DIR__.'/../views/footer.tpl.php';
+    }
+}
+```
+
+Toutes les données de notre tableau `type` situé dans notre BDD est donc stocké dans `$typeObjet` puis dans `$type`. Ensuite on va appeler la fonction show de notre objet en y saisissant les paramètres souhaités : `$this->show('type', ['id' => $id, 'allTypes' => $type ]);`. Icinous avons le paramètre `'type'` qui sera stocké dans la variable `$viewName` ainsi que les données `'id' => $id` et `'allTypes' => $type` qui seront stockées dans la variable ` $viewVars=[]` qui est un tableau. Elles seront donc stockées sous cette forme :
+```php
+$viewVars = [
+    'id' => $id,
+    'allTypes' => $type
+]
+```
+
+Show lancera ensuite les trois require en prenant le `viewName` pour afficher le template demandé.
+
+## Et le résultat ? 
+
+```html
+<h2>
+Je suis la catégorie <?= $viewVars['id'] ?>
+</h2>
+
+<ul>
+<?php foreach($viewVars['allTypes'] as $typeObj): ?>
+    <li>
+        <?= $typeObj->getId() ?> - <?= $typeObj->getName() ?>
+    </li>
+<?php endforeach; ?>
+</ul>
+```
+
+On pourra avoir ainsi dans notre page `type.tpl.php` une boucle par exmple où l'on récupèrera les données de notre BDD qui sont stockés dans `$viewVars['allTypes']` sous forme d'objet qu'on appelera comme suit $typeObj->getId() qui ira donc chercher la fonction de la class `Type` et ainsi donner son contenu.
