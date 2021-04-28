@@ -28,3 +28,8 @@ Date:   Fri Mar 12 18:03:35 2021 +0100
 -  Y'a plus qu'à reprendre l'exo !
 
 Pensez à recréer une branch si vous souhaitez refaire des commits de vos exercices pour éviter d'effectuer à chaque fois cette manipulation. 
+
+## MVC Starter Pack
+
+le lien du starter fourni par Charles O'Clock https://github.com/O-clock-Sheherazade/mvc-starter
+le lien pour git clone : git@github.com:O-clock-Sheherazade/mvc-starter.git
