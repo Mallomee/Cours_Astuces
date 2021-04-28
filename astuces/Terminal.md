@@ -78,3 +78,7 @@ On peut aussi juste écrire les premier caractères de 'lidentifiant(hash) du co
 `$ git push --set-upstream origin branchName` ou plus simplement `git push -u origin branchName` permet d'ajouter la branche crée en local sur Github
 
 `git merge nomDeLaBrancheAMerge`on se place dans la branche où l'on veut merge (via checkout) et on dit quel dossier on veut merge dans la commande.
+
+### Composer
+
+`composer install`
