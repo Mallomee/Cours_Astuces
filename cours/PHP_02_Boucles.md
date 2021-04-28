@@ -1,4 +1,7 @@
-# Les Conditions
+# Les Boucles
+
+Les boucles permettent de boucler en répétant leur contenu jusqu'à ce qu'on leur demande d'arrêter ou que la condition est rempli.
+En car de risque de répétition infini  inclure une sécurité peut être un ebonne pratique à prendre. Une condition dans lequel on met un `break` sera à envisager lors d'essai.
 
 ## While
 
@@ -13,9 +16,19 @@ while($a <= 10){
 }
 ```
 
-Dans notre exemple ci dessus, notre boucle continuera de boucle tant que **$a** ne sera pas arrivé à **10**. 
+Dans notre exemple ci dessus, notre boucle continuera de boucler tant que **$a** ne sera pas arrivé à **10**. 
 
 ## For
 
 ## Foreach
 
+### Un tableau simple
+
+Cette boucle sert principalement à effectuer une énumération du contenu d'un tableau. Elle se présente ainsi
+
+```php
+foreach($arrayName as $key => $value){
+
+}
+```
+`$arrayName` sera la variable contenant le tableau, `$key` sera la clé si le tableau en contient ou prendra les index de base du tableau (0,1,2...). Quant à  `$value` il représente chaque élément du tableau.
