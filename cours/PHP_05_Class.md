@@ -1,4 +1,4 @@
-# Les Class
+# Les Classes
 
 Exemple:
 
