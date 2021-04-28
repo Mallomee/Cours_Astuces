@@ -10,7 +10,7 @@
 
 `ls` liste les dossiers présent à l'endroit où vous effectuez le ls.`ls -a` permet d'afficher les dossiers cachés et `ls -l` permet d'afficher les dossiers sous forme de liste.
 
-`mkdir NameNewDossier` crée un dossier. Vous pouvez aussi créer un dossier via un chemin. Exemple `mkdir ./chemin/MonNouveauDossier` ira créer un nouvau dossier dans le dossier enfant 'chemin' de celui où nous sommes (le `.` indiquant que c'est le dossier où nous nous trouvons)
+`mkdir NameNewDossier` crée un dossier. Vous pouvez aussi créer un dossier via un chemin. Exemple `mkdir ./chemin/MonNouveauDossier` ira créer un nouvau dossier dans le dossier enfant 'chemin' de celui où nous sommes (le `.` indiquant que  c'est le dossier où nous nous trouvons)
 
 `rmdir NameNewDossier` supprime un dossier **vide**.
 
@@ -27,7 +27,17 @@ faire une recherche d'une chaine de caractère précise dans un fichier Markdown
 
 ### Git
 
-documentations : https://git-scm.com/doc
+documentations : https://git-scm.com/doc https://perso.liris.cnrs.fr/pierre-antoine.champin/enseignement/intro-git/
+
+#### Créer un nouveau repo
+
+- Se mettre dans le répertoire du dossier
+- faire un `git init` pour que ce dossier soit initialisé en projet git.
+- faire ensuite les commandes comme pour ajouter du contenu à un repo existant `git add .`, puis `git commit -m "Nom Du commit"`.
+- Créer le projet sur GitHub.com sans mettre de readme (afin d'éviter les conflits entre les deux projets) puis copier le lien du répertoire (situé en haut à droite et se terminant généralement pas `.git`)
+- `git remote add origin LienCopié` en manip dans la console pour désigner le répertoire de git comme cible du projet et répondre aux informations demandées
+- `git remote -v` vérifie que tout marche
+- `git push origin master` qui va tout envoyé tous vos fichiers en un premier push.
 
 #### Récupérer un repo
 
@@ -65,4 +75,10 @@ On peut aussi juste écrire les premier caractères de 'lidentifiant(hash) du co
 
 `git branch -d branchName` supprime la branche sus-nommée. Il ne faut pas être dessus avant de la supprimer
 
-`git merge nomDeLaBrancheAMerge`on se place dans la branche où l'on veut merge et on dit quel dossier on veut merge dans la commande.
+`$ git push --set-upstream origin branchName` ou plus simplement `git push -u origin branchName` permet d'ajouter la branche crée en local sur Github
+
+`git merge nomDeLaBrancheAMerge`on se place dans la branche où l'on veut merge (via checkout) et on dit quel dossier on veut merge dans la commande.
+
+### Composer
+
+`composer install`
