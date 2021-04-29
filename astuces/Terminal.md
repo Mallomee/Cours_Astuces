@@ -81,4 +81,12 @@ On peut aussi juste écrire les premier caractères de 'lidentifiant(hash) du co
 
 ### Composer
 
-`composer install`
+`composer install` permet de réinstaller le vendor souvent mis en gitignore
+
+`composer update` mise à jour de composer
+
+`composer dump-autoload`
+
+### Apache via PHP
+
+`php -S localhost:8080 -t public/`
