@@ -31,6 +31,10 @@ On peut instancier plusieurs objets `$groupe1 = new Donjon('Tom', 'Hugo', 'Hardc
 `$this` deviendra donc `$groupe` dans le premier objet ou `$groupe1` dans le second.
 
 
-public => accès à la propriété ou méthode depuis l'extérieur de la classe
-private => accès à la propriété ou méthode seulement dans la classe qui les définis
-protected => accès à la propriété ou méthode dans la classe qui la définie ainsi que dans les classes enfants
+## Les paramètres
+
+- public => accès à la propriété ou méthode depuis l'extérieur de la classe
+- private => accès à la propriété ou méthode seulement dans la classe qui les définis
+- protected => accès à la propriété ou méthode dans la classe qui la définie ainsi que dans les classes enfants
+
+## Les méthodes
