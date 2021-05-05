@@ -89,4 +89,4 @@ On peut aussi juste écrire les premier caractères de 'lidentifiant(hash) du co
 
 ### Apache via PHP
 
-`php -S localhost:8080 -t public/` permet de créer un serveur via php
+`php -S localhost:8080 -t public` permet de créer un serveur via php
