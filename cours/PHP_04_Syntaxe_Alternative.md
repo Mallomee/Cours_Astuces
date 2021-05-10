@@ -16,6 +16,7 @@ Ainsi en bonne pratique on priviligiera
 
  Ici vous avons mis un if dans une balise php : `<?php if ($verite):?>`. L'accolade d'ouverture est faite par le `:` puis on ferme la balise et on saisi notre code en html. On rouvre ensuite un code PHP pour mettre le else (qui fermera ainsi le **IF** plus haut) où on lui donne aussi un code HTLM à l'intérieur. Enfin on ferme complètement notre condition en mettant à la fin un `<?php endif ?>` qui clôture l'ensemble.
 
+
 ## Pour les boucles
 
 ### while

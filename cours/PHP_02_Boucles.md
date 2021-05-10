@@ -8,6 +8,7 @@ En car de risque de répétition infini  inclure une sécurité peut être un eb
 Cette boucle est la plus simple. Tant que l'expression de la boucle n'est pas validé, la boucle continuera et sera évaluée comme true.
 
 Exemple
+
 ```php
 $a = 1
 
@@ -31,4 +32,5 @@ foreach($arrayName as $key => $value){
 
 }
 ```
+
 `$arrayName` sera la variable contenant le tableau, `$key` sera la clé si le tableau en contient ou prendra les index de base du tableau (0,1,2...). Quant à  `$value` il représente chaque élément du tableau.
