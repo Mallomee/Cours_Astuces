@@ -99,7 +99,7 @@ Alors lui c'est le plus vil et complet des tableaux PHP. Il s'agit d'un tableau 
     ]
 ```
 
-Ce tableau est très utile pour compacter des données dans des tableaux et appeler un des ses éléments se fait comme suit : `$bestOfTeam['profTeam']['Piper']` ce qui me donnera : `"GregOclock"`.
+Ce tableau est très utile pour compacter des données dans des tableaux, et appeler un des ses éléments se fait comme suit : `$bestOfTeam['profTeam']['Piper']` ce qui me donnera : `"GregOclock"`.
 
 Ce tableau n'est pas souvent appelé comme cela et l'on priviligiera l'emploi de `foreach` à cet égard. (voir exemple dans /test/test.php ou le sujet consacré aux boucles pour plus d'informations).
 
