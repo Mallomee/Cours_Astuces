@@ -53,6 +53,14 @@ documentations : https://git-scm.com/doc https://perso.liris.cnrs.fr/pierre-anto
 
 `git pull` récupère sur github tous ce qui a été ajouté (sur la branche où l'on se trouve ? A confirmer)
 
+#### Récupérer une branch sur git
+
+`git clone lienDuRepo`
+
+`git branch -a` permet de voir les branch sur ta machine et sur le repo de git
+
+`git checkout BranchVisé` te bascule sur la branch que tu souhaites voir.
+
 #### Les branch
 
 `git branch -a` Nous montre les branches ainsi que celle où nous nous trouvons. la branche courante sera annoté d'une `*`
