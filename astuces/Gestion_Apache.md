@@ -4,7 +4,7 @@
 
 https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-fr
 
-## Les commandes de base
+## Les commandes de base de Apache
 
 Pour arrêter votre serveur Web, tapez :
 
