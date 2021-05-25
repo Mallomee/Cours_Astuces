@@ -31,3 +31,7 @@ Pour réactiver le service de lancement automatique au démarrage, tapez :
 ``sudo systemctl enable apache2``
  
 Désormais, Apache devrait démarrer automatiquement au redémarrage du serveur.
+
+Pour vérifier le status du serveur :
+
+`service apache2 status`
